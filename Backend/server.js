@@ -24,7 +24,7 @@ app.get('/api/events/:id/seats', async (req, res) => {
         res.json(result.rows);
 
     } catch (err) {
-        console.error('Error fetching seats:', err.message);
+        console.error('Error fetching seats:', err);
         res.status(500).json({ error: 'Failed to fetch seats' });
     }
 });
