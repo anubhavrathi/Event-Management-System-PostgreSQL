@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const API_URL = "https://event-management-system-backend-ud2l.onrender.com";
+const API_URL = "http://localhost:5001";
 
 export default function App() {
   const [seats, setSeats] = useState([]);
