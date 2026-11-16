@@ -2,11 +2,13 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./database');
+const authRoutes = require('./auth');
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use('/api/auth', authRoutes);
 
 // Endpoint 1: Fetch all seat statuses
 app.get('/api/events/:id/seats', async (req, res) => {
