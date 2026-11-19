@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
-const API_URL = "http://localhost:5001";
+const API_URL = "https://event-management-system-postgresql.onrender.com";
 
 export default function App() {
   const [seats, setSeats] = useState([]);
