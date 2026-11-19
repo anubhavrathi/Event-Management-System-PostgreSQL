@@ -33,3 +33,12 @@ SELECT 1, generate_series(1, 40), 'available'
 ON CONFLICT (event_id, seat_number) DO NOTHING;
 SELECT * FROM events;
 SELECT * FROM tickets;
+
+CREATE TABLE IF NOT EXISTS users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    role VARCHAR(20) DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
